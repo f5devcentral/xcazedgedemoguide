@@ -149,12 +149,6 @@ Find **xc_api_url** variable and fill it with your F5 xC tenant name.
       default = "https://your_tenant.console.ves.volterra.io/api"
     }
 
-Update path to the XC p12 certificate file.
-
-    variable "xc_api_p12_file" {
-      default = "./path-to-api-cert.p12"
-    }
-
 Navigate to the **module_1** folder and initialize Terraform by running init command.
 
     cd ./module_1
@@ -180,15 +174,9 @@ Find **xc_api_url** variable and fill it with your F5 xC tenant name.
       default = "https://your_tenant.console.ves.volterra.io/api"
     }
 
-Update path to the XC p12 certificate file.
-
-    variable "xc_api_p12_file" {
-      default = "./path-to-api-cert.p12"
-    }
-
 Navigate to the **module_2** folder and initialize Terraform by running init command.
 
-    cd ./module_1
+    cd ./module_2
     terraform init
 
 Apply Terraform script.
@@ -197,7 +185,7 @@ Apply Terraform script.
 
 ## Module 3
 
-Open **./module_2/var.tf** and update **user_domain** variable with your domain name
+Open **./module_3/var.tf** and update **user_domain** variable with your domain name
 
     variable "user_domain" {
       type    = string
@@ -211,15 +199,9 @@ Find **xc_api_url** variable and fill it with your F5 xC tenant name.
       default = "https://your_tenant.console.ves.volterra.io/api"
     }
 
-Update path to the XC p12 certificate file.
+Navigate to the **module_3** folder and initialize Terraform by running init command.
 
-    variable "xc_api_p12_file" {
-      default = "./path-to-api-cert.p12"
-    }
-
-Navigate to the **module_2** folder and initialize Terraform by running init command.
-
-    cd ./module_1
+    cd ./module_3
     terraform init
 
 Apply Terraform script.
