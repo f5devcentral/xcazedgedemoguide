@@ -5,11 +5,11 @@
 Before running the Terraform script, please ensure that you have [installed the Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) and have [signed in to your Azure Account](https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli). It is required that you have the **Owner** role and create service principal subscription with **Contributor** role for it. You also must [accept the subscription agreement](https://docs.cloud.f5.com/docs/how-to/site-management/create-azure-site#accept-subscription-agreement) to deploy the XC Azure VNET Site.
 
 
-Sign in to the F5 Distributed Cloud Console and open **Administration** tab.
+Sign in to the F5 Distributed Cloud Console and open the **Administration** tab.
 
 ![](../assets/terraform/administration.png)
 
-Open **Credentials** section and click **Add Credentials**.
+Open the **Credentials** section and click **Add Credentials**.
 
 ![](../assets/terraform/create_credentials.png)
 
@@ -81,11 +81,11 @@ Save the output
     xc_private_key = <sensitive>
     xc_public_key = ssh-rsa AAAAB3NzaC....
     
-Connect to the kiosk VM with RDP connection and update DNS Server. Use **kiosk_address** from the output. **azureuser** as a login. To retrieve the password followinf command:
+Connect to the kiosk VM with RDP connection and update DNS Server. Use **kiosk_address** from the output. **azureuser** as a login. To retrieve the password following command:
 
     terraform output kiosk_password
 
-Open DNS setings and use the DNS server from the output **appstack_private_ip** and any public as a Secondary DNS
+Open DNS settings and use the DNS server from the output **appstack_private_ip** and any public as a Secondary DNS
 
     10.125.10.5
     8.8.8.8
@@ -211,6 +211,6 @@ Apply Terraform script.
 
 ## Clean up
 
-Run the **terraform destroy** command in the each forlder.
+Run the **terraform destroy** command in each folder.
 
     terraform destroy
